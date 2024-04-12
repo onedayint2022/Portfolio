@@ -2,7 +2,6 @@
 @import '../../Constant/color.scss';
 .Header_container {
     height: 4rem;
-    background: saddlebrown;
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -12,7 +11,7 @@
 .Header_name {
     font: $fs_l_20;
     font-weight: bold;
-    background: salmon;
+    color: $theme_400;
 }
 
 .Header_props {
@@ -20,12 +19,17 @@
     text-align: right;
     ul li {
         list-style-type: none;
-        background: sandybrown;
         height: 2rem;
         padding: 0 1rem;
         text-align: center;
         display: inline-flex;
         align-items: center;
         font: $fs_l_16;
+        color: $theme_400;
+    }
+    ul li:hover {
+        cursor: pointer;
+        color: $light_600;
+        transition: 0.2s;
     }
 }
