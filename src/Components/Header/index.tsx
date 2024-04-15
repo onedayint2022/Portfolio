@@ -8,11 +8,15 @@
 /** This section will include all the necessary dependence for this tsx file */
 import React, { useState } from 'react';
 import * as style from './style.scss';
+import { Avatar } from 'antd';
+import Ava from '../../Asserts/ava.png';
+import { layer } from '@fortawesome/fontawesome-svg-core';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
 interface HeaderProps {
-    demo?: string;
+    currentPage: string;
+    pageOnChange: (page: string) => void;
 }
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
@@ -20,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }: HeaderProps): JSX.El
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
-    const headerProps: Array<String> = ['About me', 'Skills', 'Education', 'Experience'];
+    const headerProps: Array<string> = ['HOME', 'PROJECT', 'CONTACT'];
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
     /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
@@ -31,11 +35,22 @@ export const Header: React.FC<HeaderProps> = ({ ...props }: HeaderProps): JSX.El
         <div className={style.Header_container}>
             {/* <------------------------------------ **** SECTION1 START **** ------------------------------------ */}
             {/** git the brief description for this section */}
-            <div className={style.Header_name}>Chuan Jiang</div>
+            <div className={style.Header_name}>
+                <div>
+                    <Avatar src={Ava} size={55} />
+                </div>
+                Chuan Jiang
+            </div>
             <div className={style.Header_props}>
                 <ul>
                     {headerProps.map((p) => (
-                        <li key={`header_${p}`}>{p}</li>
+                        <li
+                            className={props.currentPage == p ? style.Header_selected : undefined}
+                            key={`header_${p}`}
+                            onClick={() => props.pageOnChange(p)}
+                        >
+                            {p}
+                        </li>
                     ))}
                 </ul>
             </div>

@@ -1,17 +1,25 @@
 @import '../../Constant/font.scss';
 @import '../../Constant/color.scss';
 .Header_container {
-    height: 4rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     padding: 0 1rem;
     user-select: none;
+    background: transparent;
+    font-family: 'Inter';
+    font-weight: 300;
+    color: $default;
 }
 
 .Header_name {
-    font: $fs_l_20;
-    font-weight: bold;
-    color: $theme_400;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    > div {
+        display: inline-block;
+        margin-right: 2rem;
+    }
 }
 
 .Header_props {
@@ -21,15 +29,19 @@
         list-style-type: none;
         height: 2rem;
         padding: 0 1rem;
+        margin: 0 1rem;
         text-align: center;
         display: inline-flex;
         align-items: center;
         font: $fs_l_16;
-        color: $theme_400;
     }
     ul li:hover {
         cursor: pointer;
         color: $light_600;
         transition: 0.2s;
+    }
+    .Header_selected {
+        color: $brown;
+        text-decoration: underline;
     }
 }

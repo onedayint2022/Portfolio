@@ -1,4 +1,6 @@
-.layout_headerContainer {
-    height: 2rem;
-    background-color: salmon;
+@import '../Constant/color.scss';
+.layout_container {
+    background-color: $background;
+    user-select: none;
+    color: $default;
 }

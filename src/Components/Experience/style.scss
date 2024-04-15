@@ -1,0 +1,46 @@
+@import '../../Constant/color.scss';
+.Experience_container {
+    margin-top: 6rem;
+    position: relative;
+}
+
+.Experience_title {
+    display: flex;
+    position: absolute;
+    left: -5rem;
+    top: -10rem;
+    font-family: 'Inconsolata';
+    font-weight: 600;
+    > div {
+        display: flex;
+        font-size: 9rem;
+        white-space: nowrap;
+        > div > span {
+            display: inline-block;
+            margin-left: 4rem;
+            color: $gray;
+        }
+    }
+}
+
+.Experience_titleBar {
+    margin-top: 15rem;
+    border-top: 0.1rem solid $line;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 3.2rem;
+    text-align: right;
+    > div {
+        cursor: pointer;
+        margin-right: 4rem;
+        height: 10rem;
+        line-height: 10rem;
+        > img {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.Experience_keywords {
+    height: 50rem;
+}

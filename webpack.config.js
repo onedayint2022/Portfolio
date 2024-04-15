@@ -63,11 +63,23 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
-            { test: /\.(gif|svg|jpg|png)$/, loader: 'file-loader' },
+            {
+                test: /\.(gif|svg|jpg|png|ttf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './',
+                        },
+                    },
+                ],
+            },
         ],
     },
 

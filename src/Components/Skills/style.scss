@@ -1,0 +1,53 @@
+@import '../../Constant/color.scss';
+.Skills_container {
+    background: $white;
+    padding: 0 2rem;
+    padding-top: 0.5rem;
+    font-family: 'Inconsolata';
+    margin: 0 2rem;
+    padding-bottom: 2rem;
+}
+
+.Skills_wrapper {
+    border: 0.1rem solid $line;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    .Skills_title {
+        font-size: 9rem;
+        padding: 2rem 0;
+        > span:first-child {
+            color: $gray;
+        }
+        > span:last-child {
+            color: $brown;
+        }
+    }
+}
+
+.Skills_skillsContainer {
+    display: flex;
+    > div {
+        > span {
+            display: block;
+            font-size: 3.2rem;
+            padding-bottom: 1rem;
+        }
+        width: 60rem;
+        border: 0.1rem solid $line;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        margin-right: 2rem;
+        > div:last-child {
+            padding-top: 2rem;
+            > img {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+.Skills_skillsProcess {
+    color: $brown;
+}

@@ -1,0 +1,40 @@
+@import '../../Constant/color.scss';
+.Education_container {
+    background: $brown;
+    height: 60rem;
+    position: relative;
+    font-family: 'Inter';
+    overflow: hidden;
+    font-size: 3.2rem;
+    color: $white;
+    padding: 0 4rem;
+    padding-top: 8rem;
+}
+
+.Education_footer {
+    font-size: 26rem;
+    position: absolute;
+    bottom: -8rem;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $default;
+    font-family: 'Inconsolata';
+}
+
+.Education_location {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 200;
+    margin-bottom: 3rem;
+}
+
+.Education_name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.Education_major {
+    font-weight: 200;
+    margin-bottom: 4rem;
+}
