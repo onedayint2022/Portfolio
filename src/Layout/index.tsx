@@ -26,7 +26,7 @@ interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({ ...props }: LayoutProps): JSX.Element => {
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
-    const [page, setPage] = useState('PROJECT');
+    const [page, setPage] = useState('HOME');
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
