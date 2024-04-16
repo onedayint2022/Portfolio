@@ -1,7 +1,17 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Experience_container {
     margin-top: 6rem;
     position: relative;
+}
+
+@keyframes move {
+    from {
+        left: -5rem;
+    }
+    to {
+        left: -45rem;
+    }
 }
 
 .Experience_title {
@@ -9,11 +19,19 @@
     position: absolute;
     left: -5rem;
     top: -10rem;
+    @media only screen and (max-width: 1023px) {
+        top: -7rem;
+    }
     font-family: 'Inconsolata';
     font-weight: 600;
+    width: 100vw;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
     > div {
         display: flex;
-        font-size: 9rem;
+        @include headFont();
         white-space: nowrap;
         > div > span {
             display: inline-block;
@@ -25,6 +43,9 @@
 
 .Experience_titleBar {
     margin-top: 15rem;
+    @media only screen and (max-width: 1023px) {
+        margin-top: 10rem;
+    }
     border-top: 0.1rem solid $line;
     font-family: 'Inter';
     font-weight: 300;

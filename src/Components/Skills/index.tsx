@@ -47,7 +47,7 @@ export const Skills: React.FC<SkillsProps> = ({ ...props }: SkillsProps): JSX.El
                 <div className={style.Skills_skillsContainer}>
                     <div>
                         <span>Web Developer</span>
-                        <Progress percent={95} showInfo={false} strokeColor={`#B27A5A`} />
+                        <Progress percent={95} showInfo={false} strokeColor={`#aacca7`} />
                         <div>
                             {icons.map((i) => (
                                 <img src={i} />
@@ -56,7 +56,7 @@ export const Skills: React.FC<SkillsProps> = ({ ...props }: SkillsProps): JSX.El
                     </div>
                     <div>
                         <span>Other</span>
-                        <Progress percent={85} showInfo={false} strokeColor={`#B27A5A`} />
+                        <Progress percent={85} showInfo={false} strokeColor={`#aacca7`} />
                         <div>
                             {icons.map((i) => (
                                 <img src={i} />

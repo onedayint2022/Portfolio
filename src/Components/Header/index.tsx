@@ -9,7 +9,7 @@
 import React, { useState } from 'react';
 import * as style from './style.scss';
 import { Avatar } from 'antd';
-import Ava from '../../Asserts/ava.png';
+import Ava from '../../Asserts/avatar.png';
 import { layer } from '@fortawesome/fontawesome-svg-core';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */

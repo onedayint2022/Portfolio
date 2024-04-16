@@ -1,20 +1,23 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Skills_container {
     background: $white;
-    padding: 0 2rem;
-    padding-top: 2rem;
+    padding: 0 6.4rem;
+    padding-top: 3.6rem;
     font-family: 'Inconsolata';
-    margin: 0 2rem;
+    margin: 0 4.4rem;
     padding-bottom: 2rem;
 }
 
 .Skills_wrapper {
     border: 0.1rem solid $line;
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 3.6rem 4.8rem;
+    padding-bottom: 0;
     .Skills_title {
-        font-size: 9rem;
-        padding: 2rem 0;
+        @include headFont();
+        padding-top: 3.6rem;
+        padding-bottom: 3.1rem;
         > span:first-child {
             color: $gray;
         }
@@ -26,17 +29,24 @@
 
 .Skills_skillsContainer {
     display: flex;
+    @media only screen and (max-width: 1439px) {
+        display: block;
+    }
     > div {
         > span {
             display: block;
-            font-size: 3.2rem;
+            @include subFont_late();
             padding-bottom: 1rem;
         }
         width: 60rem;
+        @media only screen and (max-width: 1023px) {
+            width: 45rem;
+        }
         border: 0.1rem solid $line;
         padding: 2rem;
         border-radius: 0.5rem;
         margin-right: 2rem;
+        margin-bottom: 4.8rem;
         > div:last-child {
             padding-top: 2rem;
             > img {

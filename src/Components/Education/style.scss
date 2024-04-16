@@ -1,20 +1,43 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Education_container {
     background: $brown;
     height: 60rem;
+    @media only screen and (max-width: 1599px) {
+        height: 55rem;
+    }
+    @media only screen and (max-width: 1439px) {
+        height: 45rem;
+    }
+    @media only screen and (max-width: 1024px) {
+        height: 40rem;
+    }
+    @media only screen and (max-width: 880px) {
+        height: 45rem;
+    }
     position: relative;
     font-family: 'Inter';
     overflow: hidden;
-    font-size: 3.2rem;
+    @include subFont_mid();
     color: $white;
-    padding: 0 4rem;
+    margin: 0 4.4rem;
+    padding: 0 7.1rem;
     padding-top: 8rem;
 }
 
 .Education_footer {
-    font-size: 26rem;
+    @include headFont_xl();
     position: absolute;
     bottom: -8rem;
+    @media only screen and (max-width: 1599px) {
+        bottom: -6rem;
+    }
+    @media only screen and (max-width: 1439px) {
+        bottom: -4rem;
+    }
+    @media only screen and (max-width: 1023px) {
+        bottom: -3rem;
+    }
     font-weight: 600;
     left: 50%;
     transform: translateX(-50%);

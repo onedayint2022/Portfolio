@@ -1,31 +1,62 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Intro_container {
     background: $white;
-    padding: 0 2rem;
-    padding-top: 2rem;
-    margin: 0 2rem;
+    padding: 0 6.4rem;
+    padding-top: 6.4rem;
+    margin: 0 4.4rem;
+    display: flex;
+    @media only screen and (max-width: 1439px) {
+        display: block;
+    }
 }
 
 .Intro_baseContainer {
     border: 0.1rem solid $line;
     border-radius: 0.5rem;
-    display: flex;
+    display: inline-flex;
+    @media only screen and (max-width: 1439px) {
+        display: flex;
+    }
     flex-direction: column;
     margin-right: 4rem;
-    padding-top: 1rem;
+    @media only screen and (max-width: 1439px) {
+        margin-right: 0rem;
+    }
+    padding: 0 3.2rem;
+    padding-top: 3.2rem;
     align-items: center;
     .Intro_baseImg {
         display: block;
         height: 60rem;
         width: 60rem;
+        @media only screen and (max-width: 1919px) {
+            height: 45rem;
+            width: 45rem;
+        }
+        @media only screen and (max-width: 1599px) {
+            height: 40rem;
+            width: 40rem;
+        }
+        @media only screen and (max-width: 1439px) {
+            height: 60rem;
+            width: 60rem;
+        }
+        @media only screen and (max-width: 1023px) {
+            height: 40rem;
+            width: 40rem;
+        }
     }
     .Intro_baseName {
-        font-size: 4.8rem;
+        @include subTitleFont();
         text-align: center;
         margin-top: 1rem;
     }
     .Intro_baseLink {
-        width: 20rem;
+        width: 30rem;
+        @media only screen and (max-width: 1919px) {
+            width: 20rem;
+        }
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -33,7 +64,7 @@
         margin-bottom: 3rem;
         > div {
             display: inline-flex;
-            padding: 0.5rem;
+            padding: 1.5rem;
             border: 0.1rem solid $line;
             height: 1.5rem;
             width: 1.5rem;
@@ -41,12 +72,23 @@
             align-items: center;
             justify-content: center;
             border-radius: 0.5rem;
+            &:hover {
+                cursor: pointer;
+                background: $brown;
+                color: $white;
+                border-color: $brown;
+                > img {
+                    filter: drop-shadow(100rem 0 0 $white);
+                    transform: translate(-100rem);
+                }
+            }
         }
     }
 }
 
 .Intro_introContainer {
-    font-size: 9rem;
+    display: inline-block;
+    @include headFont();
     font-family: 'Inconsolata';
     .Intro_introEx {
         color: $gray;
@@ -58,6 +100,7 @@
     .Intro_introTitle {
         color: $brown;
         padding-right: 4rem;
+        white-space: nowrap;
     }
     > div {
         margin-top: 2rem;
@@ -66,7 +109,10 @@
 
 .Intro_introContext {
     padding: 4rem 0;
-    font-size: 3.2rem;
+    @media only screen and (max-width: 1599px) {
+        padding: 2rem 0;
+    }
+    @include subFont();
     color: $gray;
     padding-right: 8rem;
     > div {
