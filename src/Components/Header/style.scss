@@ -10,6 +10,10 @@
     color: $default;
     padding: 4.4rem;
     padding-bottom: 3.6rem;
+    font-size: 2.4rem;
+    @media only screen and (max-width: 819px) {
+        padding: 2rem;
+    }
 }
 
 .Header_name {
@@ -54,6 +58,23 @@
             left: 0;
             visibility: visible;
             border-bottom: 0.2rem solid $brown;
+        }
+    }
+    .Header_propsBars {
+        display: none;
+        &:hover {
+            cursor: pointer;
+            color: $brown;
+        }
+    }
+    @media only screen and (max-width: 819px) {
+        .Header_propsBars {
+            display: block;
+        }
+    }
+    @media only screen and (max-width: 819px) {
+        .Header_propsList {
+            display: none;
         }
     }
 }

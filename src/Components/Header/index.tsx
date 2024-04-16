@@ -11,6 +11,8 @@ import * as style from './style.scss';
 import { Avatar } from 'antd';
 import Ava from '../../Asserts/avatar.png';
 import { layer } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -42,7 +44,10 @@ export const Header: React.FC<HeaderProps> = ({ ...props }: HeaderProps): JSX.El
                 Chuan Jiang
             </div>
             <div className={style.Header_props}>
-                <ul>
+                <div className={style.Header_propsBars}>
+                    <FontAwesomeIcon icon={faBars} />
+                </div>
+                <ul className={style.Header_propsList}>
                     {headerProps.map((p) => (
                         <li
                             id={p}

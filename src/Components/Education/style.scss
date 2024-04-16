@@ -15,6 +15,9 @@
     @media only screen and (max-width: 880px) {
         height: 45rem;
     }
+    @media only screen and (max-width: 819px) {
+        height: 32rem;
+    }
     position: relative;
     font-family: 'Inter';
     overflow: hidden;
@@ -23,6 +26,10 @@
     margin: 0 4.4rem;
     padding: 0 7.1rem;
     padding-top: 8rem;
+    @media only screen and (max-width: 819px) {
+        margin: 0;
+        padding: 2rem;
+    }
 }
 
 .Education_footer {
@@ -37,6 +44,9 @@
     }
     @media only screen and (max-width: 1023px) {
         bottom: -3rem;
+    }
+    @media only screen and (max-width: 819px) {
+        bottom: -1.5rem;
     }
     font-weight: 600;
     left: 50%;
