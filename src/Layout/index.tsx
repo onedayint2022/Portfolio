@@ -14,6 +14,7 @@ import { Skills } from '../Components/Skills';
 import { Education } from '../Components/Education';
 import { Experience } from '../Components/Experience';
 import { Work } from '../Components/Work';
+import { Project } from '../Components/Project';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -25,7 +26,7 @@ interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({ ...props }: LayoutProps): JSX.Element => {
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
-    const [page, setPage] = useState('HOME');
+    const [page, setPage] = useState('PROJECT');
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
@@ -52,6 +53,7 @@ export const Layout: React.FC<LayoutProps> = ({ ...props }: LayoutProps): JSX.El
             {page == 'PROJECT' && (
                 <>
                     <Work />
+                    <Project />
                 </>
             )}
 

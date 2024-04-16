@@ -1,0 +1,31 @@
+@import '../../Constant/color.scss';
+.Work_container {
+    margin: 0 4.4rem;
+    padding-top: 7.4rem;
+    background: $white;
+}
+
+.Work_wrapper {
+    margin: 0 6.2rem;
+    border: 0.1rem solid $line;
+    border-radius: 0.5rem;
+}
+
+.Work_title {
+    margin-top: 3.6rem;
+    font-family: 'Inconsolata';
+    font-weight: 600;
+    font-size: 9rem;
+    > div {
+        padding: 0 6.4rem;
+    }
+    > div > span {
+        color: $gray;
+    }
+    > div:first-child {
+        margin-bottom: 10rem;
+    }
+    > div:last-child {
+        border-bottom: none;
+    }
+}

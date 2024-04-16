@@ -1,15 +1,15 @@
 @import '../../Constant/font.scss';
 @import '../../Constant/color.scss';
 .Header_container {
-    height: 8rem;
     display: flex;
     align-items: center;
-    padding: 0 1rem;
     user-select: none;
     background: transparent;
     font-family: 'Inter';
     font-weight: 300;
     color: $default;
+    padding: 4.4rem;
+    padding-bottom: 3.6rem;
 }
 
 .Header_name {
@@ -18,7 +18,7 @@
     align-items: center;
     > div {
         display: inline-block;
-        margin-right: 2rem;
+        margin-right: 1.6rem;
     }
 }
 
@@ -28,7 +28,7 @@
     ul li {
         list-style-type: none;
         height: 2rem;
-        margin: 0 2cqh;
+        margin-left: 3rem;
         text-align: center;
         display: inline-flex;
         align-items: center;
@@ -37,12 +37,23 @@
     }
     ul li:hover {
         cursor: pointer;
-        color: $light_600;
-        transition: 0.2s;
+        color: $brown;
     }
     .Header_selected {
         color: $brown;
-        font-weight: 500;
-        border-bottom: 0.2rem solid $brown;
+        // font-weight: 500;
+        position: relative;
+        visibility: hidden;
+        &::after {
+            font-family: 'Inter';
+            display: block;
+            position: absolute;
+            content: attr(id);
+            font-weight: 500;
+            height: 1.9rem;
+            left: 0;
+            visibility: visible;
+            border-bottom: 0.2rem solid $brown;
+        }
     }
 }
