@@ -1,0 +1,71 @@
+@import '../../Constant/color.scss';
+.Contact_mapWrapper {
+    padding: 0 7.8rem;
+}
+
+.Contact_map {
+    width: 100%;
+    height: 50rem;
+    border: none;
+}
+
+.Contact_container {
+    background: $white;
+    margin: 0 4.4rem;
+}
+
+.Contact_header {
+    padding: 0 7.8rem;
+    padding-top: 2.4rem;
+    padding-bottom: 4.8rem;
+    display: flex;
+    font-family: 'Inconsolata';
+    justify-content: space-between;
+    font-size: 8rem;
+    font-weight: 600;
+    border-bottom: 0.1rem solid $line;
+    > div {
+        border-bottom: 0.5rem solid;
+        white-space: nowrap;
+    }
+    > div:first-child {
+        color: $default;
+    }
+    > div:last-child {
+        color: $brown;
+    }
+}
+
+.Contact_address {
+    font-family: 'Inconsolata';
+    font-size: 8rem;
+    font-weight: 600;
+    margin: 9.6rem 0;
+    text-align: center;
+}
+
+.Contact_thanks {
+    font-family: 'Inconsolata';
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: right;
+    padding: 0 7.8rem;
+    margin-top: 4.8rem;
+    > span {
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+    }
+}
+
+.Contact_footer {
+    margin-top: 9.2rem;
+    font-family: 'Inconsolata';
+    font-size: 9.6rem;
+    font-weight: 600;
+    padding: 0 7.8rem;
+    > div > span {
+        color: $brown;
+    }
+    padding-bottom: 5rem;
+}

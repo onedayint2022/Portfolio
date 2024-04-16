@@ -1,67 +1,65 @@
 /**
- * @file Layout
- * @date 2024-04-12
+ * @file Contact
+ * @date 2024-04-16
  * @author Andy Jiang
- * @lastModify Andy Jiang 2024-04-12
+ * @lastModify Andy Jiang 2024-04-16
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import React, { useState } from 'react';
 import * as style from './style.scss';
-import { Header } from '../Components/Header';
-import { Introduction } from '../Components/Introduction';
-import { Skills } from '../Components/Skills';
-import { Education } from '../Components/Education';
-import { Experience } from '../Components/Experience';
-import { Work } from '../Components/Work';
-import { Project } from '../Components/Project';
-import { Contact } from '../Components/Contact';
+import { APIProvider, Map } from '@vis.gl/react-google-maps';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
-interface LayoutProps {
+interface ContactProps {
     demo?: string;
 }
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
-export const Layout: React.FC<LayoutProps> = ({ ...props }: LayoutProps): JSX.Element => {
+export const Contact: React.FC<ContactProps> = ({ ...props }: ContactProps): JSX.Element => {
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
-    const [page, setPage] = useState('HOME');
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
     /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
-    const pageOnChange = (page: string) => {
-        setPage(page);
-    };
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
-        <div className={style.layout_container}>
+        <div className={style.Contact_container}>
             {/* <------------------------------------ **** SECTION1 START **** ------------------------------------ */}
             {/** git the brief description for this section */}
-            <Header pageOnChange={pageOnChange} currentPage={page} />
-            {page == 'HOME' && (
-                <>
-                    <Introduction />
-                    <Skills />
-                    <Education />
-                    <Experience />
-                </>
-            )}
-            {page == 'PROJECT' && (
-                <>
-                    <Work />
-                    <Project />
-                </>
-            )}
-            {page == 'CONTACT' && (
-                <>
-                    <Contact />
-                </>
-            )}
+            <div className={style.Contact_header}>
+                <div>{`<+61 451715218/>`}</div>
+                <div>{`onedayint0308@gmail.com`}</div>
+            </div>
+            <div className={style.Contact_address}>{`161 Emu Bank, Belconnen, ACT, 2617`}</div>
+            <div className={style.Contact_mapWrapper}>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2021.8918236759055!2d149.06457202008073!3d-35.23618812101313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b17ad7171bc041d%3A0x5a14748fa9790d53!2s161%20Emu%20Bank!5e0!3m2!1sen!2sau!4v1713263051475!5m2!1sen!2sau"
+                    className={style.Contact_map}
+                    loading="lazy"
+                ></iframe>
+            </div>
+            <div className={style.Contact_thanks}>
+                <span>{`>I sincerely appreciate the opportunity to showcase my work and qualifications. Please feel free to reach out to me if you believe I am a suitable candidate for the position. I am eager to discuss how my skills and experience align with the requirements of the role and how I can contribute to your team. Looking forward to the possibility of working together.<`}</span>
+            </div>
+            <div className={style.Contact_footer}>
+                <div>
+                    {`<`}
+                    <span>THANK YOU</span>
+                    {` FOR TAKING TIME`}
+                </div>
+                <div>{`TO`}</div>
+                <div>
+                    {`REVIEW MY `}
+                    <span>PORTFOLIO</span>
+                    {`/>`}
+                </div>
+            </div>
+
             {/* <------------------------------------ **** SECTION1 END **** ------------------------------------ */}
         </div>
     );
