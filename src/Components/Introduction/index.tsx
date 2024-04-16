@@ -42,7 +42,11 @@ export const Introduction: React.FC<IntroductionProps> = ({
             <Row>
                 <Col span={10}>
                     <div className={style.Intro_baseContainer}>
-                        <Image src={Ava} className={style.Intro_baseImg} />
+                        <Image
+                            src={Ava}
+                            className={style.Intro_baseImg}
+                            preview={{ toolbarRender: undefined }}
+                        />
                         <div className={style.Intro_baseName}>CHUAN JIANG</div>
                         <div className={style.Intro_baseLink}>
                             {icons.map((icon, i) => (
@@ -68,31 +72,31 @@ export const Introduction: React.FC<IntroductionProps> = ({
                         <div className={style.Intro_introContext}>
                             <div>
                                 {`> Highly skilled and motivated Front-end Developer with `}
-                                <strong>three years</strong>
+                                <span>three years</span>
                                 {` of experience.`}
                             </div>
                             <div>
                                 {`> Proficient in `}
-                                <strong>TypeScript</strong>
+                                <span>TypeScript</span>
                                 {`,`}
-                                <strong>React</strong>
+                                <span>React</span>
                                 {`  framework, and associated development tools.`}
                             </div>
                             <div>
-                                {`> Strong foundation in `}
-                                <strong>coding</strong>
+                                {`> span foundation in `}
+                                <span>coding</span>
                                 {` and `}
-                                <strong>logical</strong>
+                                <span>logical</span>
                                 {` thinking.`}
                             </div>
                             <div>
                                 {`> Passionate about front-end development and actively pursuing `}
-                                <strong>self-learning</strong>
+                                <span>self-learning</span>
                                 {` in full-stack development.`}
                             </div>
                             <div>
                                 {`> Effective team player with `}
-                                <strong>problem-solving</strong>
+                                <span>problem-solving</span>
                                 {` abilities, eager to tackle challenges and grow in a dynamic environment`}
                             </div>
                             <div />

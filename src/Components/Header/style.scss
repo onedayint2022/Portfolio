@@ -28,12 +28,12 @@
     ul li {
         list-style-type: none;
         height: 2rem;
-        padding: 0 1rem;
-        margin: 0 1rem;
+        margin: 0 2cqh;
         text-align: center;
         display: inline-flex;
         align-items: center;
         font: $fs_l_16;
+        box-sizing: border-box;
     }
     ul li:hover {
         cursor: pointer;
@@ -42,6 +42,7 @@
     }
     .Header_selected {
         color: $brown;
-        text-decoration: underline;
+        font-weight: 500;
+        border-bottom: 0.2rem solid $brown;
     }
 }
