@@ -78,3 +78,33 @@
         }
     }
 }
+
+.Header_drawerTitle {
+    font-family: 'Inconsolata';
+    font-weight: 500;
+    font-size: 2.4rem;
+    > span {
+        color: $brown;
+    }
+}
+
+.Header_drawerList {
+    font-family: 'Inter';
+    font-weight: 300;
+    li {
+        list-style: none;
+        height: 4rem;
+        line-height: 4rem;
+        margin-top: 2rem;
+    }
+}
+
+.Header_drawerSelected {
+    color: $brown;
+    font-weight: 500;
+    > span {
+        display: inline-block;
+        border-bottom: 0.1rem solid $brown;
+        height: 3rem;
+    }
+}
