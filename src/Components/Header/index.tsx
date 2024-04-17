@@ -44,6 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }: HeaderProps): JSX.El
                 open={open}
                 onClose={drawerOnClose}
                 closeIcon={false}
+                className={style.Header_drawerContainer}
                 title={
                     <div className={style.Header_drawerTitle}>
                         {`<`}

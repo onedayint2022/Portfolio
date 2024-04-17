@@ -79,6 +79,10 @@
     }
 }
 
+.Header_drawerContainer {
+    user-select: none;
+}
+
 .Header_drawerTitle {
     font-family: 'Inconsolata';
     font-weight: 500;
@@ -96,6 +100,7 @@
         height: 4rem;
         line-height: 4rem;
         margin-top: 2rem;
+        cursor: pointer;
     }
 }
 

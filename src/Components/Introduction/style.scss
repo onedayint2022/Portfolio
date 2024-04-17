@@ -87,6 +87,7 @@
                 color: $white;
                 border-color: $brown;
                 > img {
+                    -webkit-filter: drop-shadow(100rem 0 0 $white);
                     filter: drop-shadow(100rem 0 0 $white);
                     transform: translate(-100rem);
                 }

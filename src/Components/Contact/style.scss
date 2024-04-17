@@ -5,14 +5,29 @@
     @media only screen and (max-width: 819px) {
         padding: 0 2rem;
     }
+    position: relative;
 }
 
 .Contact_map {
     width: 100%;
     height: 50rem;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media only screen and (max-width: 819px) {
         height: 30rem;
+    }
+}
+
+.Contact_spin {
+    position: absolute;
+    background: $line;
+    left: 6.4rem;
+    width: calc(100% - 12.8rem);
+    @media only screen and (max-width: 819px) {
+        left: 2;
+        width: calc(100% - 4rem);
     }
 }
 
