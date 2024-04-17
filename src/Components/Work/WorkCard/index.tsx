@@ -38,6 +38,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ ...props }: WorkCardProps): 
                 <div>{props.name}</div>
                 <div>{props.date}</div>
             </div>
+            <div className={style.WorkCard_date}>{props.date}</div>
             <div className={style.WorkCard_position}>{props.position}</div>
             <div className={style.WorkCard_location}>{props.location}</div>
             <div className={style.WorkCard_jds}>

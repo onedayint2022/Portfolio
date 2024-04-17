@@ -32,8 +32,12 @@ export const Contact: React.FC<ContactProps> = ({ ...props }: ContactProps): JSX
             {/* <------------------------------------ **** SECTION1 START **** ------------------------------------ */}
             {/** git the brief description for this section */}
             <div className={style.Contact_header}>
-                <div>{`<+61 451715218/>`}</div>
-                <div>{`onedayint0308@gmail.com`}</div>
+                <div>
+                    <span>{`<0451715218/>`}</span>
+                </div>
+                <div>
+                    <span>{`onedayint0308@gmail.com`}</span>
+                </div>
             </div>
             <div className={style.Contact_address}>{`161 Emu Bank, Belconnen, ACT, 2617`}</div>
             <div className={style.Contact_mapWrapper}>

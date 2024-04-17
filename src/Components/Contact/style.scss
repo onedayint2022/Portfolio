@@ -1,30 +1,45 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Contact_mapWrapper {
-    padding: 0 7.8rem;
+    padding: 0 6.4rem;
+    @media only screen and (max-width: 819px) {
+        padding: 0 2rem;
+    }
 }
 
 .Contact_map {
     width: 100%;
     height: 50rem;
     border: none;
+    @media only screen and (max-width: 819px) {
+        height: 30rem;
+    }
 }
 
 .Contact_container {
     background: $white;
     margin: 0 4.4rem;
+    @media only screen and (max-width: 819px) {
+        margin: 0;
+    }
 }
 
 .Contact_header {
-    padding: 0 7.8rem;
+    padding: 0 6.4rem;
     padding-top: 2.4rem;
     padding-bottom: 4.8rem;
+    padding-top: 6.4rem;
+    @media only screen and (max-width: 819px) {
+        padding: 2rem;
+    }
     display: flex;
     font-family: 'Inconsolata';
     justify-content: space-between;
-    font-size: 8rem;
+    @include headFont();
     font-weight: 600;
     border-bottom: 0.1rem solid $line;
-    > div {
+    > div > span {
+        display: inline-block;
         border-bottom: 0.5rem solid;
         white-space: nowrap;
     }
@@ -34,38 +49,70 @@
     > div:last-child {
         color: $brown;
     }
+    @media only screen and (max-width: 1439px) {
+        display: block;
+        > div:last-child {
+            margin-top: 2rem;
+        }
+    }
+    @media only screen and (max-width: 1023px) {
+        > div > span {
+            border-width: 0.2rem;
+        }
+    }
 }
 
 .Contact_address {
     font-family: 'Inconsolata';
-    font-size: 8rem;
+    @include headFont();
+    padding: 0 6.4rem;
     font-weight: 600;
     margin: 9.6rem 0;
-    text-align: center;
+    text-align: left;
+    @media only screen and (max-width: 819px) {
+        padding: 0 2rem;
+        margin: 2rem 0;
+    }
 }
 
 .Contact_thanks {
     font-family: 'Inconsolata';
-    font-size: 2.4rem;
+    @include contextFont();
     font-weight: 300;
     text-align: right;
-    padding: 0 7.8rem;
+    padding: 0 6.4rem;
     margin-top: 4.8rem;
     > span {
         display: inline-block;
         width: 50%;
         text-align: left;
     }
+    @media only screen and (max-width: 1023px) {
+        > span {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 819px) {
+        padding: 0 2rem;
+        margin-top: 2rem;
+    }
 }
 
 .Contact_footer {
     margin-top: 9.2rem;
     font-family: 'Inconsolata';
-    font-size: 9.6rem;
+    @include headFont();
     font-weight: 600;
-    padding: 0 7.8rem;
+    padding: 0 6.4rem;
     > div > span {
         color: $brown;
     }
     padding-bottom: 5rem;
+    @media only screen and (max-width: 819px) {
+        padding: 0;
+        padding: 0 2rem;
+        margin: 0;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }

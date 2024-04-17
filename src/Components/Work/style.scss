@@ -1,12 +1,20 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Work_container {
     margin: 0 4.4rem;
-    padding-top: 7.4rem;
+    padding-top: 6.4rem;
     background: $white;
+    @media only screen and (max-width: 819px) {
+        margin: 0;
+        padding-top: 2rem;
+    }
 }
 
 .Work_wrapper {
-    margin: 0 6.2rem;
+    margin: 0 6.4rem;
+    @media only screen and (max-width: 819px) {
+        margin: 0 2rem;
+    }
     border: 0.1rem solid $line;
     border-radius: 0.5rem;
 }
@@ -15,7 +23,7 @@
     margin-top: 3.6rem;
     font-family: 'Inconsolata';
     font-weight: 600;
-    font-size: 9rem;
+    @include headFont();
     > div {
         padding: 0 6.4rem;
     }
@@ -27,5 +35,19 @@
     }
     > div:last-child {
         border-bottom: none;
+    }
+    @media only screen and (max-width: 1023px) {
+        > div:first-child {
+            margin-bottom: 0rem;
+        }
+    }
+    @media only screen and (max-width: 819px) {
+        margin-top: 2rem;
+        > div {
+            padding: 0 2rem;
+        }
+        > div:first-child {
+            margin-bottom: 2rem;
+        }
     }
 }

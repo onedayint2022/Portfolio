@@ -1,64 +1,88 @@
 @import '../../../Constant/color.scss';
+@import '../../../Constant/font.scss';
 .ProjectCard_container {
     border-top: 0.1rem solid $line;
     padding: 9.6rem 6.4rem 6.4rem 6.4rem;
     color: $default;
+    @media only screen and (max-width: 819px) {
+        padding: 2rem;
+    }
 }
 
 .ProjectCard_name {
     font-family: 'Inconsolata';
-    font-size: 3.2rem;
+    @include subFont_mid();
     font-weight: 600;
     display: inline-block;
     padding: 3.2rem 4.8rem;
     border: 0.1rem solid $line;
     border-radius: 9.8rem;
     box-sizing: border-box;
+    @media only screen and (max-width: 1439px) {
+        padding: 0 3rem;
+        height: 7.8rem;
+        line-height: 7.8rem;
+    }
+    @media only screen and (max-width: 819px) {
+        padding: 0 2rem;
+        height: 4.8rem;
+        line-height: 4.8rem;
+    }
 }
 
 .ProjectCard_date {
     font-weight: 200;
-    font-size: 3.2rem;
+    @include subFont_mid();
     margin-top: 2.2rem;
+}
+
+@mixin details {
+    @include contextFont();
+    @media only screen and (max-width: 819px) {
+        margin-top: 2rem;
+    }
 }
 
 .ProjectCard_location {
     font-weight: 200;
-    font-size: 2.4rem;
+    @include details();
     margin-top: 1.2rem;
 }
 
 .ProjectCard_title {
     margin-top: 1.2rem;
     font-weight: 400rem;
-    font-size: 2.4rem;
+    @include details();
     color: $brown;
 }
 
 .ProjectCard_bg {
     margin-top: 4.8rem;
     font-weight: 700;
-    font-size: 2.4rem;
+    @include details();
 }
 
 .ProjectCard_background {
     margin-top: 2.4rem;
     font-weight: 300;
-    font-size: 2.4rem;
+    @include details();
 }
 
 .ProjectCard_res {
     margin-top: 3.6rem;
     font-weight: 700;
-    font-size: 2.4rem;
+    @include details();
 }
 
 .ProjectCard_resps {
     margin-top: 2.4rem;
     > div {
-        font-size: 2.4rem;
+        @include details();
         font-weight: 200;
         margin-top: 2.4rem;
+        @media only screen and (max-width: 819px) {
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -67,7 +91,7 @@
     > div {
         display: inline-block;
         margin-right: 3.2rem;
-        font-size: 3.2rem;
+        @include subFont_mid();
         font-weight: 600;
         color: $brown;
         &::before {
@@ -75,5 +99,12 @@
             content: '#';
         }
         margin-bottom: 1.6rem;
+    }
+    @media only screen and (max-width: 819px) {
+        margin-top: 2rem;
+        > div {
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
     }
 }

@@ -1,22 +1,35 @@
 @import '../../Constant/color.scss';
+@import '../../Constant/font.scss';
 .Project_container {
     padding-top: 3.2rem;
     background: $white;
     margin: 0 4.4rem;
+    padding-bottom: 4.4rem;
+    @media only screen and (max-width: 819px) {
+        margin: 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .Project_wrapper {
     border: 0.1rem solid $line;
     border-radius: 0.5rem;
     margin: 0 6.4rem;
+    @media only screen and (max-width: 819px) {
+        margin: 0 2rem;
+    }
 }
 
 .Project_title {
     padding: 0 6.4rem;
     padding-top: 3.6rem;
     padding-bottom: 8.2rem;
+    @media only screen and (max-width: 819px) {
+        padding: 2rem;
+    }
     > div {
-        font-size: 9rem;
+        @include headFont();
         font-family: 'Inconsolata';
         font-weight: 600;
     }
