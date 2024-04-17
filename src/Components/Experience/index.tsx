@@ -6,7 +6,7 @@
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as style from './style.scss';
 import Go from '../../Asserts/Icons/go.png';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
@@ -22,19 +22,30 @@ export const Experience: React.FC<ExperienceProps> = ({
 }: ExperienceProps): JSX.Element => {
     /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
     /************* This section will include this component HOOK function *************/
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        };
+    });
+    const [moveX, setMoveX] = useState(0);
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
     const loop = Array.from('theTimes');
+
     /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
+    const handleScroll = () => {
+        setMoveX(document.documentElement.scrollTop);
+    };
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
         <div className={style.Experience_container}>
             {/* <------------------------------------ **** SECTION1 START **** ------------------------------------ */}
             {/** git the brief description for this section */}
-            <div className={style.Experience_title}>
+            <div className={style.Experience_title} style={{ left: `-${moveX}px` }}>
                 {loop.map((_, i) => (
                     <div key={`experience_${i}`}>
                         <div>

@@ -28,10 +28,10 @@
     font-family: 'Inconsolata';
     font-weight: 600;
     width: 100vw;
-    animation-name: move;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+    // animation-name: move;
+    // animation-duration: 10s;
+    // animation-iteration-count: infinite;
+    // animation-direction: alternate-reverse;
     > div {
         display: flex;
         @include headFont();
