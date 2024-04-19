@@ -7,10 +7,10 @@
 
 @keyframes move {
     from {
-        left: -5rem;
+        left: -100%;
     }
     to {
-        left: -45rem;
+        left: 0rem;
     }
 }
 
@@ -69,5 +69,114 @@
 }
 
 .Experience_keywords {
-    height: 50rem;
+    height: 80rem;
+    @media only screen and (max-width: 1919px) {
+        height: 60rem;
+    }
+    @media only screen and (max-width: 1439px) {
+        height: 54rem;
+    }
+    @media only screen and (max-width: 1023px) {
+        height: 40rem;
+    }
+    @media only screen and (max-width: 819px) {
+        height: 26rem;
+    }
+}
+
+@mixin moveItem {
+    > div {
+        white-space: nowrap;
+        position: absolute;
+        left: -1rem;
+    }
+    > div div {
+        @include moveFont();
+        display: inline-block;
+        margin-right: 3.2rem;
+        padding: 4.8rem 9.8rem;
+        border: 0.1rem solid $line;
+        border-radius: 9.8rem;
+        @media only screen and (max-width: 1919px) {
+            padding: 3.6rem 4.8rem;
+        }
+        @media only screen and (max-width: 1023px) {
+            padding: 2.4rem;
+            margin-right: 2rem;
+        }
+        @media only screen and (max-width: 819px) {
+            padding: 1.6rem;
+        }
+    }
+}
+
+.Experience_works {
+    @include moveItem();
+}
+
+.Experience_projs {
+    @include moveItem();
+    > div {
+        top: 30rem;
+        @media only screen and (max-width: 1919px) {
+            top: 25rem;
+        }
+        @media only screen and (max-width: 1439px) {
+            top: 23rem;
+        }
+        @media only screen and (max-width: 1023px) {
+            top: 20rem;
+        }
+        @media only screen and (max-width: 819px) {
+            top: 16rem;
+        }
+    }
+}
+
+.Experience_worksAuto {
+    @include moveItem();
+    > div {
+        top: 50rem;
+        left: 0rem;
+        animation: move;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        @media only screen and (max-width: 1919px) {
+            top: 40rem;
+        }
+        @media only screen and (max-width: 1439px) {
+            top: 36rem;
+        }
+        @media only screen and (max-width: 1023px) {
+            top: 30rem;
+        }
+        @media only screen and (max-width: 819px) {
+            top: 22rem;
+        }
+    }
+}
+
+.Experience_projsAuto {
+    @include moveItem();
+    > div {
+        top: 70rem;
+        left: 0rem;
+        animation: move;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        @media only screen and (max-width: 1919px) {
+            top: 55rem;
+        }
+        @media only screen and (max-width: 1439px) {
+            top: 49rem;
+        }
+        @media only screen and (max-width: 1023px) {
+            top: 40rem;
+        }
+        @media only screen and (max-width: 819px) {
+            top: 28rem;
+        }
+    }
 }

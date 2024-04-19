@@ -33,7 +33,13 @@ export const Experience: React.FC<ExperienceProps> = ({
     /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
     /************* This section will include this component parameter *************/
     const loop = Array.from('theTimes');
-
+    const work = ['DATAREACHABLE PTY LTD', 'EKAS', 'MASHANGXIAOFEI'];
+    const project = [
+        'Online Questionnaire Editor',
+        'Online Plugin Editor',
+        'Internal System',
+        'Web-based Tutor Robot',
+    ];
     /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
@@ -63,7 +69,52 @@ export const Experience: React.FC<ExperienceProps> = ({
                     <img src={Go} />
                 </div>
             </div>
-            <div className={style.Experience_keywords}></div>
+            <div className={style.Experience_keywords}>
+                <div className={style.Experience_works}>
+                    <div style={{ left: `-${moveX * 2}px` }}>
+                        {loop.map(() => (
+                            <>
+                                {work.map((w) => (
+                                    <div>{w}</div>
+                                ))}
+                            </>
+                        ))}
+                    </div>
+                </div>
+                <div className={style.Experience_projs}>
+                    <div style={{ left: `-${moveX * 4}px` }}>
+                        {loop.map(() => (
+                            <>
+                                {project.map((p) => (
+                                    <div>{p}</div>
+                                ))}
+                            </>
+                        ))}
+                    </div>
+                </div>
+                <div className={style.Experience_worksAuto}>
+                    <div>
+                        {loop.map(() => (
+                            <>
+                                {work.map((w) => (
+                                    <div>{w}</div>
+                                ))}
+                            </>
+                        ))}
+                    </div>
+                </div>
+                <div className={style.Experience_projsAuto}>
+                    <div>
+                        {loop.map(() => (
+                            <>
+                                {project.map((p) => (
+                                    <div>{p}</div>
+                                ))}
+                            </>
+                        ))}
+                    </div>
+                </div>
+            </div>
             {/* <------------------------------------ **** SECTION1 END **** ------------------------------------ */}
         </div>
     );
